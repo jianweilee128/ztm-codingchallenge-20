@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+
+/* Used CSS Text Animation by Nooray Yemon*/
+
+body {
+  text-align: center;
+  background: #005AA7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  background-size: 400%;
+  color: #333;
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 4rem;
+  padding-top: 40vh;
+  height: 100vh;
+  overflow: hidden;
+
+}
+
+body:hover{
+  animation: gradientBG 15s ease infinite;
+}
+body:hover > .top-line{
+  animation:topenter 3.5s forwards alternate infinite;
+}
+body:hover > .bottom-line{
+  animation:bottomenter 3.5s forwards alternate infinite;
+}
+
+
+.text-container div {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.top-line {
+  border-bottom: 3px solid #555;
+  margin-bottom: 30px;
+  width: 100%;
+  display: inline-block;
+  transform: translateX(30%);
+}
+
+.bottom-line {
+  border-top: 3px solid #555;
+  margin-top: 20px;
+  width: 100%;
+  display: inline-block;
+  transform: translateX(-30%);
+}
+
+body:hover > .text-container div:first-of-type {
+  animation: showup 7s infinite;
+}
+
+body:hover > .text-container div:last-of-type {
+  width: 0px;
+  animation: reveal 7s infinite;
+}
+
+body:hover > .text-container div:last-of-type span {
+  margin-left: -800px;
+  animation: slidein 7s infinite;
+}
+
+@keyframes topenter {
+  0% {
+    transform: translateX(110%);
+  }
+  100% {
+    transform: translateX(30%);
+  }
+}
+@keyframes bottomenter {
+  0% {
+    transform: translateX(-110%);
+  }
+  100% {
+    transform: translateX(-30%);
+  }
+}
+
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    margin-left: -800px;
+  }
+  20% {
+    margin-left: -800px;
+  }
+  35% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    width: 0px;
+  }
+  20% {
+    opacity: 1;
+    width: 0px;
+  }
+  30% {
+    width: 210px;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 210px;
+  }
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+
